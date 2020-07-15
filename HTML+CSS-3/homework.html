@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3's homework</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		* {
+		    margin: 0;
+		    padding: 0;
+		    border:none;
+		}
+		.sky{
+			position: relative;
+			width: 100%;
+			height: 432px;
+			background: -webkit-linear-gradient(rgb(196, 228, 253),white);
+			background:    -moz-linear-gradient(rgb(196, 228, 253),white);
+			background:    	 -o-linear-gradient(rgb(196, 228, 253),white);
+			background:    		linear-gradient(rgb(196, 228, 253),white);
+		}
+		.grass{
+			position: relative;
+			width: 100%;
+			height: 288px;
+			background: -webkit-linear-gradient(white,rgb(148, 190, 89));
+			background:    -moz-linear-gradient(white,rgb(148, 190, 89));
+			background:    	 -o-linear-gradient(white,rgb(148, 190, 89));
+			background:    		linear-gradient(white,rgb(148, 190, 89));
+		}
+		.sky .cloud{
+			position: absolute;
+			background-color: white;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+		}
+		.cloud::before{
+			position: absolute;
+			content: "";
+			width: 80px;
+			height: 80px;
+			background-color: white;
+			border-radius: 50%;
+			transform: translate(-55%,30%);
+		}
+		.cloud::after{
+			position: absolute;
+			content: "";
+			width: 70px;
+			height: 70px;
+			background-color: white;
+			border-radius: 50%;
+			transform: translate(80%,35%);
+		}
+		.sky .first{
+			right: -120px;
+			opacity: 0.8;
+			top: 60px;
+			-webkit-animation:moveleft 12s linear infinite;
+					animation:moveleft 12s linear infinite;
+		}
+		.sky .second{
+			right: 50px;
+			opacity: 0.7;
+			top: 180px;
+			-webkit-animation:moveleft 20s linear infinite;
+					animation:moveleft 20s linear infinite;
+		}
+		.sky .third{
+			right: 100px;
+			opacity: 0.5;
+			top: 30px;
+			-webkit-animation:moveleft 15s linear infinite;
+					animation:moveleft 15s linear infinite;
+		}
+		.sky .forth{
+			right: -100px;
+			opacity: 1;
+			top: 100px;
+			-webkit-animation:moveleft 22s linear infinite;
+					animation:moveleft 22s linear infinite;
+		}
+		.sky .last{
+			right: -200px;
+			opacity: 0.6;
+			top: 10px;
+			-webkit-animation:moveleft 17s linear infinite;
+					animation:moveleft 17s linear infinite;
+		}
+		.grass .rabbit{
+			position: absolute;
+			bottom: 50px;
+			right: 200px;
+		}
+		.grass .rabbit img{
+			width: 150px;
+			height: 150px;
+		}
+		@keyframes moveleft{
+			0%{
+				-webkit-transform:translate(0,0);
+						transform:translate(0,0);
+			}
+			100% {
+				-webkit-transform:translate(-2000px,0);
+						transform:translate(-2000px,0);
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="sky">
+		<div class="cloud first"></div>
+		<div class="cloud second"></div>
+		<div class="cloud third"></div>
+		<div class="cloud forth"></div>
+		<div class="cloud last"></div>
+	</div>
+	<div class="grass">
+		<div class="rabbit"><img src="img/rabbit.png"></div>
+
+	</div>
+</body>
+</html>
