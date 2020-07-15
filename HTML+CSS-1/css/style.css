@@ -1,0 +1,65 @@
+*{
+	font-family: 宋体;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+table{
+	border-collapse: collapse;
+	text-align: center;
+	vertical-align: middle;	
+	width: 100%;
+}
+table,td{
+	border: 1px solid gray;
+}
+table > tbody img{
+	width: 54px;
+	height: 54px;
+}
+table > thead{
+	height: 60px;
+	width: 100%;
+}
+table > thead > tr{
+	height: 60px;
+	background-color: #169bd5;
+	width: 100%;
+	text-align: left;
+}
+table > thead > img{
+	height: 60px;
+}
+table > tbody .left{
+	width: 12%;
+	text-align: left;
+	vertical-align: top;
+}
+table > tbody .left p{
+	line-height: 30px;
+	margin-left: 15px;
+}
+table > tbody .right{
+	width: 88%;
+}
+table > tbody .right .first,.second	{
+	text-align: left;
+	font-weight: bold;
+	height: 50px;
+	line-height: 50px;
+}
+table > tbody .right .list tr{
+	height: 54px;
+	line-height: 54px;
+}
+table > tbody .right input{
+	border: 1px solid gray;
+}
+tfoot {
+	height: 60px;
+	line-height: 60px;
+}
+tfoot > tr{
+	height: 60px;
+	background-color: #169bd5;
+}
